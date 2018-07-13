@@ -1,4 +1,4 @@
 body {
-  max-width: window.innerWidth;;
+  max-width: screen.width;;
   margin: auto;
 }
