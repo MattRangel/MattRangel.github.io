@@ -1,4 +1,5 @@
 body {
-  max-width: 500px;
+  max-width: device-width;
+  zoom: 1.0;
   margin: auto;
 }
