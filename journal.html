@@ -1,10 +1,45 @@
 <!DOCTYPE html>
 <html>
-<head><link rel="stylesheet" href="standard.css"></head>
 <body>
-<form>
-<input type='date' min='2018-07-13' max='2018-07-23' id="DayInput" required><br>
-<input type="submit" onClick=“DayInput = 'http://mattrangel.net/entries/' + DayInput; alert(DayInput);">
-</form>
+<form action="">
+<input type='date' min='2018-07-13' max='2018-07-23' id='DayInput' required><br>
+<input type="submit" value="Submit" onClick="myFunction()">
+<script>
+
+function myFunction( ) {
+  var inpObj = document.getElementById("DayInput");
+  if (!inpObj.checkValidity()) {
+    alert("Invalid Date!")
+  }
+  else {
+    var x = document.getElementById('DayInput').value;
+    x = 'http://mattrangel.net/entries/' + x + '.txt';
+    alert(x);
+  }
+}
+
+</script>
 </body>
-</html>
+</html><!DOCTYPE html>
+<html>
+<body>
+<form action="">
+<input type='date' min='2018-07-13' max='2018-07-23' id='DayInput' required><br>
+<input type="submit" value="Submit" onClick="myFunction()">
+<script>
+
+function myFunction( ) {
+  var inpObj = document.getElementById("DayInput");
+  if (!inpObj.checkValidity()) {
+    alert("Invalid Date!")
+  }
+  else {
+    var x = document.getElementById('DayInput').value;
+    x = 'http://mattrangel.net/entries/' + x + '.txt';
+    alert(x);
+  }
+}
+
+</script>
+</body>
+</html
