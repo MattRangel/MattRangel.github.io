@@ -1,4 +1,3 @@
-body {
-  width: device-width;
-  zoom: 2.0;
+div {
+  max-width: device-width;
 }
