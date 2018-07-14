@@ -3,7 +3,7 @@
 <body>
 <form>
 <input type='date' min='2018-07-13' max='2018-07-23' id="DayInput" required><br>
-<input type="submit" onClick="window.location = 'http://mattrangel.net/entries/' + DayInput;">
+<input type="submit" onClick=“DayInput = 'http://mattrangel.net/entries/' + DayInput; alert(DayInput);">
 </form>
 </body>
 </html>
