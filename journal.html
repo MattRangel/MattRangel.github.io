@@ -12,20 +12,6 @@ function myFunction( ) {
     alert("Invalid Date!")
   }
   else {
-    var x = document.getElement<!DOCTYPE html>
-<html>
-<body>
-<form action="">
-<input type='date' min='2018-07-13' max='2018-07-23' id='DayInput' required><br>
-<input type="submit" value="Submit" onClick="myFunction()">
-<script>
-
-function myFunction( ) {
-  var inpObj = document.getElementById("DayInput");
-  if (!inpObj.checkValidity()) {
-    alert("Invalid Date!")
-  }
-  else {
     var x = document.getElementById('DayInput').value;
     x = 'http://mattrangel.net/entries/' + x + '.txt';
     alert(x);
