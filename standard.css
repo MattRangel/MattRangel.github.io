@@ -1,3 +1,4 @@
 body {
-  max-width: window.screen.availWidth;
+  var DeviceW: window.screen.availWidth;
+  max-width: DeviceW / 2;
 }
