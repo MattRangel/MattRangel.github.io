@@ -38,7 +38,7 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submitForm","qid":"2","text":"
     }
     .form-all{
         width:600px;
-        color:#ffffff !important;
+        color:#555 !important;
         font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, sans-serif;
         font-size:14px;
     }
@@ -110,19 +110,26 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submitForm","qid":"2","text":"
       font-size: 14px
     }
   
+    .supernova {
+      background-color: #f5f5f5;
+    }
+    .supernova body {
+      background: transparent;
+    }
+  
     .supernova .form-all, .form-all {
-      background-color: #626b37;
+      background-color: #fff;
       border: 1px solid transparent;
     }
   
     .form-all {
-      color: #ffffff;
+      color: #555;
     }
     .form-header-group .form-header {
-      color: #ffffff;
+      color: #555;
     }
     .form-header-group .form-subHeader {
-      color: #ffffff;
+      color: #555;
     }
     .form-label-top,
     .form-label-left,
@@ -130,17 +137,10 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submitForm","qid":"2","text":"
     .form-html,
     .form-checkbox-item label,
     .form-radio-item label {
-      color: #ffffff;
+      color: #555;
     }
     .form-sub-label {
-      color: #ffffff;
-    }
-  
-    .supernova {
-      background-color: #d0fc97;
-    }
-    .supernova body {
-      background: transparent;
+      color: #6f6f6f;
     }
   
     .form-textbox,
@@ -150,6 +150,29 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submitForm","qid":"2","text":"
     .form-captcha input,
     .form-spinner input {
       background-color: #fff;
+    }
+  
+    .form-line-error {
+      overflow: hidden;
+      .transition(none; 0.3s; ease;);
+      background-color: #FFF4F4;
+    }
+
+    .form-line-error .form-error-message {
+      background-color: #FF3200;
+      //width: 150px;
+      clear: both;
+      float: none;
+      .form-error-arrow {
+        border-bottom-color: #FF3200;
+      }
+    }
+
+    .form-line-error input:not(#coupon-input),
+    .form-line-error textarea,
+    .form-line-error .form-validation-error {
+      border: 1px solid #FF3200;
+      .box-shadow(0 0 3px #FF3200);
     }
   
     .supernova {
@@ -337,7 +360,7 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submitForm","qid":"2","text":"
   </script>
   <div class="formFooter-heightMask">
   </div>
-<!-- Advertisemnet thing
+<!--
   <div class="formFooter f6">
     <a href="https://www.jotform.com/pricing?utm_source=formfooter&utm_medium=banner&utm_term=90354831257155&utm_content=jotform_logo&utm_campaign=powered_by_jotform_le" target="_blank" class="formFooter-logoLink"><img class="formFooter-logo" src="https://cdn.jotfor.ms/assets/img/logo/logo-new@1x.png" alt="" style="height: 44px;"></a>
     <div class="formFooter-rightSide">
