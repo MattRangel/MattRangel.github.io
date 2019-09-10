@@ -1,0 +1,3 @@
+September 9, 2019
+I’ve been working on this automation program that’ll let me automatically sign up for my homeroom class.
+I would’ve maybe finished it today but the website I was doing automation to was running very slowly, and so now I have to survive another day without that task being automated.
