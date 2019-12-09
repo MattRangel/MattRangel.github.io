@@ -16,8 +16,9 @@ function RetrieveDatePage( ) {
   }
   else {
     var x = document.getElementById('DayInput').value;
-    x = 'http://mattrangel.net/entries/' + x + '.txt';
-    window.open(x);
+    var dateParts = x.split("-");
+    var pageLink = "http://mattrangel.net/entries/" + dateParts[0] + "/" + dateParts[1] + "/" + dateParts[2] + ".txt";
+    window.open(pageLink);
   }
 }
 
