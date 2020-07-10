@@ -1,4 +1,4 @@
-January 8, 2020 - Wednesday
+July 8, 2020 - Wednesday
 After waking up this morning I hopped on my computer and started a little projet.
 I wanted to make a userscript for a website that I use.
 Before today I had never really done too much with JavaScript just basic one line things randomly a few times.
