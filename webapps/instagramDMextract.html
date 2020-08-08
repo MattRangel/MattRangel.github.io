@@ -101,7 +101,7 @@ function scoreWord() {
 	for (i = (node.length - 1); 0 <= i; i = i - 1) {
 		if (document.querySelector("#item_" + i).checked) {
 			for(z = (node[i]["conversation"].length - 1); 0 <= z; z = z - 1) {
-				if (typeof node[i]["conversation"][z]['text'] != "undefined" && node[i]["conversation"][z]['text'].includes(document.getElementById("qWord").value)) {
+				if (typeof node[i]["conversation"][z]['text'] != "undefined" && node[i]["conversation"][z]['text'].toUpperCase().includes(document.getElementById("qWord").value.toUpperCase())) {
 					if (typeof scores[node[i]["conversation"][z]["sender"]] == "undefined") {
 						scores[node[i]["conversation"][z]["sender"]] = 1;
 					}
