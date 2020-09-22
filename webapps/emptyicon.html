@@ -12,7 +12,7 @@ body {
 	color: white;
 }
 
-.containBox {
+#containBox {
 	padding: 0em;
 	margin: auto;
 	max-width: 500px;
@@ -43,21 +43,27 @@ body {
 	display:block;
 	z-index:1;
 }
+
+h2 {
+	color: white;
+}
 </style>
 </head>
 <body>
 <canvas id="canvas" width="0" height="0" style="display:none;"></canvas>
 <input type="file" onchange="loadPhoto()" id="userFile"></input>
 <button onclick="whichPhone()">Reload Buttons</button>
-<div class="containBox">
+<div id="containBox">
 
 <img id="bgPhoto" onload="whichPhone()">
 <div id="buttonContainer"></div>
 
 </div>
+<h2 id="errorTXT"></h2>
 <script>
 var iconSize; var iconHorSpace; var iconVrtSpace; var iconMarginSides; var iconMarginTop; var iconVrtBottomExtra; var iconHorSpaceMiddleExtra; var mod;
 function loadPhoto() {
+	document.getElementById("containBox").style.display = "block";
 	var userPhoto = document.getElementById("userFile").files[0];
 	var reader = new FileReader();
 	var bgPhoto = document.getElementById("bgPhoto");
@@ -67,9 +73,7 @@ function loadPhoto() {
 	};
 	if (userPhoto) {
 		reader.readAsDataURL(userPhoto);
-		console.log(2);
 	}
-	console.log(3);
 }
 
 
@@ -78,7 +82,7 @@ function whichPhone() {
 	var photoElm = document.getElementById("bgPhoto");
 	mod = photoElm.width / photoElm.naturalWidth;
 	var x = photoElm.naturalHeight * photoElm.naturalWidth;
-	console.log(x);
+	document.getElementById("errorTXT").innerHTML = "";
 	var xIndex = phoneDimesions.indexOf(x);
 	switch (xIndex) {
 	//min-height:90vh; max-height:120vh; 
@@ -148,15 +152,17 @@ function whichPhone() {
 			iconHorSpace = 0;
 			iconHorSpaceMiddleExtra = 0;
 			iconVrtSpace = 0;
-			iconVrtBottomExtra = 0; 
+			iconVrtBottomExtra = 0;
 			iconMarginSides = 0;
 			iconMarginTop = 0;
-			console.log("error");
+			photoElm.src = "";
+			document.getElementById("containBox").style.display = "none";
+			document.getElementById("errorTXT").innerHTML = "Error: Your phone is unsupported, contact me to fix it! (Make sure the screenshot is unedited)";
+			return;
 	}
+	console.log("epic win");
 	document.getElementById("canvas").height = iconSize;
 	document.getElementById("canvas").width = iconSize;
-	//draw overlay function
-	//iconPos(1);
 	boxes();
 }
 
@@ -173,6 +179,7 @@ function drawIcon(index) {
 }
 
 function boxes() {
+	console.log("WOWOWOW");
 	document.getElementById("buttonContainer").innerHTML = "";
 	var buttnCntr = document.getElementById("buttonContainer");
 	buttnCntr.style.width = document.getElementById("bgPhoto").width + "px";
