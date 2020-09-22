@@ -167,7 +167,7 @@ function drawIcon(index) {
 	var image = document.getElementById("bgPhoto");
 	ctx.drawImage(image, coords[0], coords[1], iconSize, iconSize, 0, 0, iconSize, iconSize);
 	var canvasLink = canvas.toDataURL("image/png");
-	document.getElementById("appleIcon").href = canvasLink;
+	//document.getElementById("appleIcon").href = canvasLink;
 	localStorage.setItem("imgData", canvasLink);
 	window.open("emptyicon/bookmark.html",'_blank');
 }
